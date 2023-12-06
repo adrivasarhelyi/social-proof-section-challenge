@@ -1,0 +1,208 @@
+/* BASE STYLES */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 23vw;
+    background-image: url("bg-pattern-top-mobile.svg"), url("bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top -10vh left, bottom right;
+}
+
+/* HEADLINE STYLES */
+
+.headline {
+    margin-top: 3.5rem;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: hsl(300, 43%, 22%);
+    text-align: center;
+    line-height: 1.6rem;
+    margin-bottom: 1.25rem;
+}
+
+.headline p {
+    font-size: .93rem;
+    text-align: center;
+    color: hsl(303, 10%, 53%);
+    font-weight: 500;
+    margin: 0 .3rem 1.5rem .3rem;
+    line-height: 1.25rem;
+}
+
+/* RATING STYLES */
+
+main {
+    margin-bottom: 3.5rem;
+}
+
+.first-rate, .second-rate, .third-rate {
+    background-color: hsl(300, 24%, 96%);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+h2 {
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.star {
+    text-align: center;
+}
+
+/* REVIEWS STYLES */
+
+.reviews {
+    padding-top: 1rem;
+}
+
+.colton, .irene, .anne {
+    background-color: hsl(300, 43%, 22%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+.colton img, .irene img, .anne img {
+    border-radius: 50%;
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+    width: 40%;
+}
+
+h3 {
+    color: hsl(300, 24%, 96%);
+    margin-top: 2.5rem;
+    font-weight: 500;
+    font-size: .93rem;
+    margin-left: -1rem;
+}
+
+h4 {
+    color: hsl(333, 80%, 67%);
+    font-size: .93rem;
+    margin-left: -1rem;
+}
+
+.colton p, .irene p, .anne p {
+    color: hsl(300, 24%, 96%);
+    font-size: .93rem;
+    margin: 1.5rem 2rem 2rem 1.5rem;
+    line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        position: relative;
+        width: 100vw;
+    }
+
+    .headline, .rating, .reviews {
+        position: absolute;
+    }
+
+    .headline {
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 50%;
+        margin-top: 0;
+        padding: 6rem 6rem 6rem 8rem;
+    }
+
+    h1 {
+        text-align: left;
+        font-size: 3rem;
+        margin-right: 7rem;
+        line-height: 2.5rem;
+    }
+
+    .headline p {
+        text-align: left;
+        font-size: 1rem;
+        margin-right: 5rem;
+    }
+
+    .rating {
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 50%;
+        padding-top: 6.5rem;
+    }
+
+    .first-rate, .second-rate, .third-rate {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+    }
+
+    .second-rate {
+        margin-left: 3rem;
+    }
+
+    .third-rate {
+        margin-left: 6rem;
+    }
+
+    .star {
+        padding-top: .3rem;
+        padding-left: 5%;
+    }
+
+    h2 {
+        padding-left: 1rem;
+    }
+
+    .reviews {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        margin-left: 8rem;
+    }
+
+    .colton, .irene, .anne {
+        width: 20rem;
+        height: 15rem;
+    }
+
+    .irene, .anne {
+        margin-left: 3rem;
+    }
+
+    .irene {
+        margin-top: 2rem;
+    }
+
+    .anne {
+        margin-top: 3rem;
+    }
+
+}
